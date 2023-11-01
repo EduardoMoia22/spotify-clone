@@ -25,9 +25,9 @@ import album from "../public/album.jpg";
 
 export default function Home() {
       return (
-            <main className="h-screen flex flex-col">
+            <div className="h-screen flex flex-col">
                   <div className="flex-1 flex">
-                        <aside className="p-6 bg-black">
+                        <aside className="p-6 bg-black hidden md:flex flex-col">
                               <div className="flex items-center gap-2">
                                     <div className="w-3 h-3 bg-red-500 rounded-full" />
                                     <div className="w-3 h-3 bg-yellow-500 rounded-full" />
@@ -156,7 +156,7 @@ export default function Home() {
                                     Good Night
                               </h1>
 
-                              <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+                              <div className="flex-1 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
                                     <div className="flex flex-col md:flex-row items-center bg-white/5 rounded overflow-hidden hover:bg-white/10 transition-colors group">
                                           <Image
                                                 src={album}
@@ -315,7 +315,7 @@ export default function Home() {
                               <h1 className="font-bold text-2xl mt-10">
                                     Recently played
                               </h1>
-                              <div className="flex-1 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 mt-4 gap-8">
+                              <div className="flex-1 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 mt-4 gap-8">
                                     <div className="flex flex-col items-center justify-center rounded p-4 gap-3 bg-white/10">
                                           <Image
                                                 src={album}
@@ -532,6 +532,6 @@ export default function Home() {
                               <Maximize2 size={20} />
                         </div>
                   </footer>
-            </main>
+            </div>
       );
 }
